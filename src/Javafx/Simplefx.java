@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.scene.text.Text;
 import javafx.scene.Scene;
 
+
 public class Simplefx extends Application {
     // A simple dialog with a button and a textbox
     Text msg = new Text("Welcome to OOP 2");
