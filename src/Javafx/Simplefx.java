@@ -9,11 +9,13 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.event.EventHandler;
 
 
 public class Simplefx extends Application {
     // A simple dialog with a button and a textbox
-    Text msg = new Text("Welcome to OOP 2");
+    Text LblMsg = new Text("Welcome to OOP 2");
     Text Name = new Text("Name: ");
     TextField txtname = new TextField();
     Button btnOk = new Button("OK");
@@ -29,11 +31,11 @@ public class Simplefx extends Application {
         gridPane.setMinSize(400, 200);
         gridPane.setAlignment(Pos.CENTER);
         gridPane.setHgap(10);
-        gridPane.setHgap(10);
+        gridPane.setVgap(10);
         gridPane.setPadding(new Insets(10, 10, 10, 10));
 
         //Adding components to the layout
-        gridPane.add(msg, 1, 1);
+        gridPane.add(LblMsg, 1, 0);
         gridPane.add(Name, 0, 1);
         gridPane.add(txtname, 1, 1);
         gridPane.add(btnOk, 0, 2);
@@ -47,14 +49,23 @@ public class Simplefx extends Application {
         stage.setScene(scene);
         stage.show();
 
+        // Event handling
+        // javafx.scene.input.MouseEvent
+        // javafx.event.EventHandler
+        btnOk.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                String name = txtname.getText();
+                String msg = "Hi "+name+", welcome to OOP II";
+                LblMsg.setText(msg);
 
-
-
-
+            }
+        });
     }
+
 
     public static void main(String[] args) {
         launch(args);
-    }
 
+    }
 }
