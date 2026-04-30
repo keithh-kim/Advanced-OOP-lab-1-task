@@ -47,6 +47,7 @@ public class Simplefx extends Application {
         // Configure Scene
         stage.setTitle("OOP II E");
         stage.setScene(scene);
+
         stage.show();
 
         // Event handling
