@@ -45,7 +45,7 @@ public class Assignmentfx extends Application {
         gridPane.setPadding(new Insets(20));
 
         // Style the buttons
-        Save.setStyle("-fx-background-color: #2072C1FF; -fx-text-fill: white; -fx-font-size: 12;");
+        Save.setStyle("-fx-background-color: #2072C1FF; -fx-text-fill: white; -fx-font-size: 12; ");
         Remove.setStyle("-fx-background-color: #2072C1FF; -fx-text-fill: white; -fx-font-size: 12; ");
 
         // Initialize the Dropdowns
